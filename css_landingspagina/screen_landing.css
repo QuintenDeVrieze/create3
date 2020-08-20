@@ -1,0 +1,1271 @@
+/*------------------------------------*\
+  #FONTS
+\*------------------------------------*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/*------------------------------------*\
+  #GENERIC
+\*------------------------------------*/
+/*
+    Generic: Page
+    ---
+    Global page styles + universal box-sizing:
+*/
+html {
+    font-size: 16px;
+    line-height: 1.5;
+    
+    color: #000000;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color:rgb(255, 255, 255);
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Customize the background color to match your design.
+ */
+::-moz-selection {
+    background: #61C19C;
+    color: white;
+    text-shadow: none;
+}
+
+::selection {
+    background: #1fceec;
+    color: white;
+    text-shadow: none;
+}
+
+/*------------------------------------*\
+  #Elements
+\*------------------------------------*/
+/*
+    Elements: Images
+    ---
+    Default markup for images to make them responsive
+*/
+img {
+    max-width: 100%;
+    vertical-align: top;
+}
+
+/*
+    Elements: typography
+    ---
+    Default markup for typographic elements
+*/
+h1,
+h2,
+h3 {
+    font-weight: 500;
+    font-family: 'Saira Condensed', sans-serif;
+}
+
+h1 {
+    font-size: 67px;
+    line-height: 72px;
+    margin: 0 0 0px;
+    font-family: 'Saira Condensed', sans-serif;
+}
+
+
+h2 {
+    font-size: 24px;
+    line-height: 32px;
+    margin: 12px 0 24px;
+    font-family: 'Saira Condensed', sans-serif;
+}
+
+
+h3 {
+    font-size: 20px;
+    line-height: 32px;
+    margin: 0 0 12px;
+    font-family: 'Saira Condensed', sans-serif;
+}
+
+
+h4,
+h5,
+h6 {
+    font-size: 20px;
+    line-height: 24px;
+    margin: 0 0 24px;
+    font-family: 'Saira Condensed', sans-serif;
+}
+
+
+p,
+ol,
+ul,
+dl,
+table,
+address,
+figure {
+    margin: 0 0 0px;
+    font-family: 'Saira Condensed', sans-serif;
+}
+
+ul,
+ol {
+    padding-left: 24px;
+}
+
+li ul,
+li ol {
+    margin-bottom: 0;
+}
+
+blockquote {
+    font-style: normal;
+    font-size: 23px;
+    line-height: 32px;
+    margin: 0 0 24px;
+}
+
+blockquote * {
+    font-size: inherit;
+    line-height: inherit;
+}
+
+figcaption {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    margin-top: 8px;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: LightGrey;
+    margin: 0 0 24px;
+}
+
+a {
+    color: #3385FF;
+    transition: all .1s ease-in-out;
+}
+
+a:visited,
+a:active {
+    color: #4F95FF;
+}
+
+a:hover,
+a:focus {
+    color: #4F95FF;
+}
+.lichtop {
+    color: #3385FF;
+    transition: all .1s ease-in-out;
+}
+
+.lichtop:hover,
+.lichtop:focus {
+    color: #6ba5fc;
+}
+/*------------------------------------*\
+  #OBJECTS
+\*------------------------------------*/
+/*
+    Objects: Row
+    ---
+    Creates a horizontal row that stretches the viewport and adds padding around children
+*/
+.o-row {
+    position: relative;
+    padding: 0px 0px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* color modifiers */
+.o-row--primary-x-light {
+    color: #fff;
+}
+
+.o-row--neutral-xx-dark {
+    color: #fff;
+    background: #FFFFFF;
+}
+
+/* intro needs a larger z-index to pull the image over the next row */
+.o-row--intro {
+    z-index: 10;
+    ;
+}
+
+/* size modifiers */
+.o-row--lg {
+    padding-top: 48px;
+    padding-bottom: 24px;
+}
+
+.o-row--intro {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.o-row--xl {
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+@media (min-width: 768px) {
+    .o-row {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .o-row--md {
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+
+    .o-row--lg {
+        padding-top: 24px;
+        padding-bottom: 48px;
+    }
+}
+
+@media (min-width: 992px) {
+    .o-row--intro {
+        padding-top: 0;
+        padding-bottom: 64px;
+    }
+
+    .o-row--xl {
+        padding-top: 16px;
+        padding-bottom: 0px;
+    }
+}
+
+/*
+    Objects: Container
+    ---
+    Creates a horizontal container that sets de global max-width
+*/
+.o-container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+   
+    /* 90 * 16px = 1440px */
+}
+
+/*
+    Objects: section
+    ---
+    Creates vertical whitespace between adjacent sections inside a row
+*/
+/*
+    Objects: section
+    ---
+    Creates vertical whitespace between adjacent sections inside a row
+*/
+.o-section {
+    display: flex;
+    flex-direction: column;
+    margin-left: 24px;
+    margin-right: 24px;
+}
+
+.o-section+.o-section {
+    margin-top: 0px;
+}
+
+@media (min-width: 768px) {
+
+    .o-section--lg+.o-section--lg,
+    .o-section--xl+.o-section--xl {}
+}
+
+@media (min-width: 1200px) {
+    .o-section--xl+.o-section--xl {
+        margin-top: 72px;
+    }
+}
+
+/*
+    Objects: Layout
+    ---
+    The layout object provides us with a column-style layout system. This object
+    contains the basic structural elements, but classes should be complemented
+    with width utilities
+*/
+.o-layout {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.o-layout__item {
+    width: 100%;
+    border: 15px ;
+    margin:0px, 5px, 0px, 0px;
+    
+
+}
+.o-layout__pagina{
+    text-align: center;
+    align-content: center;
+}
+
+/* gutter modifiers, these affect o-layout__item too */
+.o-layout--gutter {
+    margin: 0 -12px;
+}
+
+.o-layout--gutter>.o-layout__item {
+    padding: 0 12px;
+}
+
+.o-layout--gutter-sm {
+    margin: 0 -6px;
+}
+
+.o-layout--gutter-sm>.o-layout__item {
+    padding: 0 6px;
+}
+
+.o-layout--gutter-lg {
+    margin: 0 -24px;
+}
+
+.o-layout--gutter-lg>.o-layout__item {
+    padding: 0 24px;
+}
+
+.o-layout--gutter-xl {
+    margin: 16px -48px;
+}
+
+.o-layout--gutter-xl>.o-layout__item {
+    padding: 0 48px;
+}
+
+/* reverse horizontal row modifier */
+.o-layout--row-reverse {
+    flex-direction: row-reverse;
+}
+
+/* Horizontal alignment modifiers*/
+.o-layout--justify-start {
+    justify-content: flex-start;
+}
+
+.o-layout--justify-end {
+    justify-content: flex-end;
+}
+
+.o-layout--justify-center {
+    justify-content: center;
+}
+
+.o-layout--justify-space-around {
+    justify-content: space-around;
+}
+
+.o-layout--justify-space-evenly {
+    justify-content: space-evenly;
+}
+
+.o-layout--justify-space-between {
+    justify-content: space-between;
+}
+
+/* Vertical alignment modifiers */
+.o-layout--align-start {
+    align-items: flex-start;
+}
+
+.o-layout--align-end {
+    align-items: flex-end;
+}
+
+.o-layout--align-center {
+    align-items: center;
+}
+
+.o-layout--align-baseline {
+    align-items: baseline;
+}
+
+/* Vertical alignment modifiers that only work if there is one than one flex item */
+.o-layout--align-content-start {
+    align-content: start;
+}
+
+.o-layout--align-content-end {
+    align-content: end;
+}
+
+.o-layout--align-content-center {
+    align-content: center;
+}
+
+.o-layout--align-content-space-around {
+    align-content: space-around;
+}
+
+.o-layout--align-content-space-between {
+    align-content: space-between;
+}
+
+/*
+    Objects: List
+    ---
+    Small reusable object to remove default list styling from lists
+*/
+.o-list {
+    list-style: none;
+    padding: 0;
+}
+
+/*
+    Object: Button reset
+    ---
+    Small button reset object
+*/
+.o-button-reset {
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+    background: transparent;
+    /* inherit font & color from ancestor */
+    color: inherit;
+    font: inherit;
+    /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+    line-height: normal;
+    /* Corrects font smoothing for webkit */
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
+    /* Corrects inability to style clickable `input` types in iOS */
+    -webkit-appearance: none;
+}
+.c-form-button {
+    font-family: "Saira Condensed", sans-serif;
+    font-size: 18px;
+    color: #FFF;
+    border: none;
+    border-radius: 6px;
+    background-color:#63cbfb ;
+    padding: 6px 12px;
+    transition: background-color 180ms ease-in-out;
+    cursor: pointer;
+}
+
+.c-form-button:hover,
+.c-form-button:focus {
+    background-color: #53abee;
+}
+
+
+/*------------------------------------*\
+  #COMPONENTS
+\*------------------------------------*/
+/*
+    Component: Logo
+    ---
+    Website main logo
+*/
+.c-logo {
+    height: 24px;
+    display: flex;
+    align-items: center;
+}
+
+.c-logo__symbol {
+    height: 100%;
+}
+
+/*
+    Component: header
+    ---
+    Main header of the website
+*/
+.c-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F7F7F7;
+    padding: 24px 24px 24px 24px;
+}
+
+.c-header__nav {
+    display: none;
+}
+
+@media (min-width: 992px) {
+    .c-header__nav {
+        display: block;
+    }
+}
+
+/*
+    Component: Nav
+    ---
+    Main navigation of the site
+*/
+.c-nav {
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.c-nav__link {
+    text-decoration: none;
+    font-weight: 400;
+    display: block;
+    padding: 8px 0;
+}
+
+.c-nav__link,
+.c-nav__link:visited,
+.c-nav__link:active {
+    color: #AFB3B1;
+}
+
+.c-nav__link:hover,
+.c-nav__link:focus {
+    color: #3EC18F;
+}
+
+@media (min-width: 992px) {
+    .c-nav__list {
+        display: flex;
+    }
+
+    .c-nav__item--cta {
+        margin-left: 20px;
+    }
+
+    .c-nav__link {
+        padding: 8px 20px;
+    }
+}
+
+/*
+    Component: Lead
+    ---
+    Lead type treatments to style everything that differs from standard typography elements
+*/
+.c-lead {
+    position: relative;
+}
+
+.c-lead--md {
+    font-size: 18px;
+    line-height: 32px;
+}
+
+.c-lead--lg {
+    font-size: 18px;
+    line-height: 24px;
+    
+}
+
+.c-lead--l {
+    font-size: 24px;
+    line-height: 32px;
+    
+}
+
+.c-lead--xl {
+    font-size: 30px;
+    line-height: 40px;
+}
+
+@media (min-width: 768px) {
+    .c-lead--xl {
+        font-size: 30px;
+        line-height: 40px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .c-lead--xl {
+        font-size: 67px;
+        line-height: 72px;
+    }
+}
+
+/*
+    Component: Intro
+    ---
+    Intro part on the homepage
+*/
+.c-intro {
+    position: relative;
+    background-color: #F7F7F7;
+   
+}
+
+@media (max-width: 991px) {
+    .c-intro {
+        margin-bottom: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+        align-items: center;
+    }
+
+    .c-intro__body {
+        position: relative;
+        margin-left: 24px;
+        margin-right: 0px;
+        align-items: center;
+    }
+
+    .c-intro__figure {
+        margin-right: 0px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .c-intro {
+        margin-bottom: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .c-intro__body {
+        position: relative;
+        top: 0px;
+        
+        margin-left: 240px;
+        margin-right: 240px;
+    }
+
+    .c-intro__figure {
+        margin-right: 0px;
+    }
+}
+
+
+
+/*
+    Component: CTA link
+    ---
+    Small cta link with custom animation
+*/
+.c-link-cta {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 500;
+    padding: 8px 20px;
+    border-radius: 4px;
+    box-shadow: inset 0 0 0 1px #3EC18F;
+    background: #3EC18F;
+}
+
+.c-link-cta,
+.c-link-cta:visited,
+.c-link-cta:active {
+    color: #fff;
+}
+
+.c-link-cta:hover,
+.c-link-cta:focus {
+    color: #fff;
+    background: #19A26D;
+}
+
+.c-link-cta:active {
+    background-color: #3385FF;
+}
+
+.c-link-cta--lg {
+    font-size: 16px;
+    padding: 16px 32px;
+}
+
+/*
+    Component: Stat
+    ---
+    Component to visualise statistics
+*/
+.c-stats {
+    margin-bottom: -24px;
+}
+
+.c-stat {
+    color: #3385FF;
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.c-stat__title {
+    margin-bottom: 4px;
+    font-size: 41px;
+    line-height: 48px;
+}
+
+.c-stat__what {
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+#myProgress {
+    width: 80%;
+    background-color: grey;
+   align-items: center;
+   margin: auto;
+  }
+  
+  #myBar {
+    width: 10%;
+    height: 30px;
+    background-color: #4CAF50;
+    text-align: center; /* To center it horizontally (if you want) */
+    line-height: 30px; /* To center it vertically */
+    color: white;
+  }
+
+  #myBar2 {
+    width: 10%;
+    height: 30px;
+    background-color: #4CAF50;
+    text-align: center; /* To center it horizontally (if you want) */
+    line-height: 30px; /* To center it vertically */
+    color: white;
+  }
+
+  #myBar3 {
+    width: 10%;
+    height: 30px;
+    background-color: #4CAF50;
+    text-align: center; /* To center it horizontally (if you want) */
+    line-height: 30px; /* To center it vertically */
+    color: white;
+  }
+
+  .kleurantwoord {
+      color :yellowgreen
+  }
+
+  /*
+    Component: Input
+    ---
+    Class to put on all input="text" like form inputs
+*/
+
+.c-input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 240px;
+    border: black;
+    border-radius: 3px;
+    background-color: white;
+    color: black;
+    font-family: inherit;
+    font-size: 16px;
+    line-height: calc(var(--global-baseline) * 3);
+    padding: calc(var(--global-baseline) * 1.5 - var(--global-borderWidth)) var(--global-whitespace-md);
+    outline: none;
+    transition: border 240ms ease-in-out;
+    margin-bottom: 16px;
+    margin-top: 12px;
+    border-bottom: 2px solid rgb(221, 220, 220);
+}
+
+.c-input:hover {
+    border-color: #63cbfb;
+}
+
+.c-input:focus,
+.c-input:active {
+    border-color: var(--global-input-focus-borderColor);
+    box-shadow: var(--global-input-focus-boxShadow);
+}
+.c-button {
+    --button-borderColor: yellowgreen;
+    --button-hover-borderColor: #6ba5fc;
+    --button-active-borderColor: #6ba5fc;
+    --button-focus-borderColor:#6ba5fc;
+    --button-backgroundColor: #3385FF;
+    --button-hover-backgroundColor: #6ba5fc;
+    --button-active-backgroundColor: #6ba5fc;
+    --button-focus-backgroundColor: #23406b;
+    --button-focus-boxShadow: var(--global-input-focus-boxShadow);
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: var(--global-borderRadius);
+    border: 1px solid var(--button-borderColor);
+    background-color: var(--button-backgroundColor);
+    color: #fff;
+    line-height: calc(var(--global-baseline) * 3);
+    padding: calc(var(--global-baseline) * 1.5 - var(--global-borderWidth)) var(--global-whitespace-md);
+    width: 200px;
+    outline: none;
+    box-shadow: var(--button-boxShadow, 0);
+    transition: all var(--global-transitionTiming-alpha) var(--global-transitionEasing-out);
+}
+
+.c-button:hover {
+    border-color: var(--button-hover-borderColor);
+    background-color: var(--button-hover-backgroundColor);
+}
+
+.c-button:focus {
+    background-color: var(--button-focus-backgroundColor);
+    border-color: var(--button-focus-borderColor);
+    box-shadow: var(--button-focus-boxShadow);
+}
+
+.c-button:active {
+    background-color: var(--button-active-backgroundColor);
+    border-color: var(--button-active-borderColor);
+    box-shadow: var(--button-active-boxShadow, 0);
+}
+
+/*------------------------------------*\
+  #UTILITIES
+\*------------------------------------*/
+/*
+    Utilities: color
+    ---
+    Utility classes to put specific colors onto elements
+*/
+.u-color-neutral-base {
+    color: rgb(0, 0, 0);
+}
+
+.u-color-neutral-dark {
+    color: #83859E;
+}
+
+/*
+    Utilities: spacing
+    ---
+    Utility classes to put specific margins and paddings onto elements
+*/
+.u-pt-clear {
+    padding-top: 0 !important;
+}
+
+.u-mb-clear {
+    margin-bottom: 0 !important;
+}
+
+.u-mb-xs {
+    margin-bottom: 4px !important;
+}
+
+.u-mb-sm {
+    margin-bottom: 8px !important;
+}
+
+.u-mb-md {
+    margin-bottom: 16px !important;
+}
+
+.u-mb-lg {
+    margin-bottom: 32px !important;
+}
+
+.u-mb-xl {
+    margin-bottom: 48px !important;
+}
+
+/*
+    Utilities: max-width
+    ---
+    Utility classes to put specific max widths onto elements
+*/
+.u-max-width-xs {
+    max-width: 18em !important;
+}
+
+.u-max-width-sm {
+    max-width: 39em !important;
+    margin: 0 auto 48px;
+}
+
+.u-max-width-md {
+    max-width: 50em !important;
+}
+
+.u-max-width-lg {
+    max-width: 63.5em !important;
+}
+
+.u-max-width-none {
+    max-width: none !important;
+}
+
+/*
+    Utility: Widths
+    ---
+    Utility classes to put specific widths onto elements
+    Will be mostly used on o-layout__item
+*/
+.u-width-auto {
+    width: auto !important;
+}
+
+.u-1-of-2 {
+    width: 50% !important;
+}
+
+.u-1-of-3 {
+    width: 33.3333333333% !important;
+}
+
+.u-2-of-3 {
+    width: 66.6666666667% !important;
+}
+
+.u-1-of-4 {
+    width: 25% !important;
+}
+
+.u-3-of-4 {
+    width: 75% !important;
+}
+
+.u-1-of-5 {
+    width: 20% !important;
+}
+
+.u-2-of-5 {
+    width: 40% !important;
+}
+
+.u-3-of-5 {
+    width: 60% !important;
+}
+
+.u-4-of-5 {
+    width: 80% !important;
+}
+
+.u-1-of-6 {
+    width: 16.6666666667% !important;
+}
+
+.u-5-of-6 {
+    width: 83.3333333333% !important;
+}
+
+@media (min-width: 576px) {
+    .u-1-of-2-bp1 {
+        width: 50% !important;
+    }
+
+    .u-1-of-3-bp1 {
+        width: 33.3333333333% !important;
+    }
+
+    .u-2-of-3-bp1 {
+        width: 66.6666666667% !important;
+    }
+
+    .u-1-of-4-bp1 {
+        width: 25% !important;
+    }
+
+    .u-3-of-4-bp1 {
+        width: 75% !important;
+    }
+
+    .u-1-of-5-bp1 {
+        width: 20% !important;
+    }
+
+    .u-2-of-5-bp1 {
+        width: 40% !important;
+    }
+
+    .u-3-of-5-bp1 {
+        width: 60% !important;
+    }
+
+    .u-4-of-5-bp1 {
+        width: 80% !important;
+    }
+
+    .u-1-of-6-bp1 {
+        width: 16.6666666667% !important;
+    }
+
+    .u-5-of-6-bp1 {
+        width: 83.3333333333% !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .u-1-of-2-bp2 {
+        width: 50% !important;
+    }
+
+    .u-1-of-3-bp2 {
+        width: 33.3333333333% !important;
+    }
+
+    .u-2-of-3-bp2 {
+        width: 66.6666666667% !important;
+    }
+
+    .u-1-of-4-bp2 {
+        width: 25% !important;
+    }
+
+    .u-3-of-4-bp2 {
+        width: 75% !important;
+    }
+
+    .u-1-of-5-bp2 {
+        width: 20% !important;
+    }
+
+    .u-2-of-5-bp2 {
+        width: 40% !important;
+    }
+
+    .u-3-of-5-bp2 {
+        width: 60% !important;
+    }
+
+    .u-4-of-5-bp2 {
+        width: 80% !important;
+    }
+
+    .u-1-of-6-bp2 {
+        width: 16.6666666667% !important;
+    }
+
+    .u-5-of-6-bp2 {
+        width: 83.3333333333% !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .u-1-of-2-bp3 {
+        width: 50% !important;
+    }
+
+    .u-1-of-3-bp3 {
+        width: 33.3333333333% !important;
+    }
+
+    .u-2-of-3-bp3 {
+        width: 66.6666666667% !important;
+    }
+
+    .u-1-of-4-bp3 {
+        width: 25% !important;
+    }
+
+    .u-3-of-4-bp3 {
+        width: 75% !important;
+    }
+
+    .u-1-of-5-bp3 {
+        width: 20% !important;
+    }
+
+    .u-2-of-5-bp3 {
+        width: 40% !important;
+    }
+
+    .u-3-of-5-bp3 {
+        width: 60% !important;
+    }
+
+    .u-4-of-5-bp3 {
+        width: 80% !important;
+    }
+
+    .u-1-of-6-bp3 {
+        width: 16.6666666667% !important;
+    }
+
+    .u-5-of-6-bp3 {
+        width: 83.3333333333% !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    .u-1-of-2-bp4 {
+        width: 50% !important;
+    }
+
+    .u-1-of-3-bp4 {
+        width: 33.3333333333% !important;
+    }
+
+    .u-2-of-3-bp4 {
+        width: 66.6666666667% !important;
+    }
+
+    .u-1-of-4-bp4 {
+        width: 25% !important;
+    }
+
+    .u-3-of-4-bp4 {
+        width: 75% !important;
+    }
+
+    .u-1-of-5-bp4 {
+        width: 20% !important;
+    }
+
+    .u-2-of-5-bp4 {
+        width: 40% !important;
+    }
+
+    .u-3-of-5-bp4 {
+        width: 60% !important;
+    }
+
+    .u-4-of-5-bp4 {
+        width: 80% !important;
+    }
+
+    .u-1-of-6-bp4 {
+        width: 16.6666666667% !important;
+    }
+
+    .u-5-of-6-bp4 {
+        width: 83.3333333333% !important;
+    }
+}
+
+/*------------------------------------*\
+  #MEDIA
+\*------------------------------------*/
+/*
+    Media Queries
+    ---
+    EXAMPLE Media Queries for Responsive Design.
+    These examples override the primary ('mobile first') styles.
+    USE THEM INLINE!
+*/
+/* Extra small devices (portrait phones, less than 576px)
+   No media query since this is the default in mobile first design
+*/
+/* Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {}
+*/
+/* Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {}
+*/
+/* Large devices (landscape tablets, desktops, 992px and up)
+@media (min-width: 992px) {}
+*/
+/* Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {}
+*/
+/*
+    Print styles.
+    ---
+    Inlined to avoid the additional HTTP request:
+    http://www.phpied.com/delay-loading-your-print-css/
+*/
+
+@media print {
+
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important;
+        /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " ("attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " ("attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre {
+        white-space: pre-wrap !important;
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+
+}
+
+
+ .loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+    background-color: black;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
